@@ -1,0 +1,24 @@
+name = "ariady-putra/more_aiken_examples"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'ariady-putra/more_aiken_examples'"
+
+[repository]
+user = "ariady-putra"
+project = "more_aiken_examples"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "main"
+source = "github"
+
+[[dependencies]]
+name = "ariady-putra/time_util"
+version = "main"
+source = "github"
+
+[[dependencies]]
+name = "ariady-putra/string_util"
+version = "main"
+source = "github"
