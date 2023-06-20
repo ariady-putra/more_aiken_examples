@@ -1,9 +1,9 @@
 use aiken/list.{has}
 use aiken/transaction.{ScriptContext, Spend, Transaction}
+use more_aiken_examples/alias.{PubKeyHash}
 use more_aiken_examples/struct/datum.{
   Datum, get_beneficiary, get_lock_until, get_owner,
 }
-use more_aiken_examples/types.{PubKeyHash}
 use time_util/cheap/posixtime.{is_after_or_at}
 
 /// We annotate the `redeemer` to `Void` to indicate that it isn't used.

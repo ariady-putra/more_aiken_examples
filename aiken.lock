@@ -7,12 +7,17 @@ version = "main"
 source = "github"
 
 [[requirements]]
+name = "ariady-putra/string_util"
+version = "main"
+source = "github"
+
+[[requirements]]
 name = "ariady-putra/time_util"
 version = "main"
 source = "github"
 
 [[requirements]]
-name = "ariady-putra/string_util"
+name = "ariady-putra/morbid"
 version = "main"
 source = "github"
 
@@ -23,13 +28,19 @@ requirements = []
 source = "github"
 
 [[packages]]
+name = "ariady-putra/string_util"
+version = "main"
+requirements = []
+source = "github"
+
+[[packages]]
 name = "ariady-putra/time_util"
 version = "main"
 requirements = []
 source = "github"
 
 [[packages]]
-name = "ariady-putra/string_util"
+name = "ariady-putra/morbid"
 version = "main"
 requirements = []
 source = "github"

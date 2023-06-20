@@ -1,5 +1,5 @@
 use aiken/time.{PosixTime}
-use more_aiken_examples/types.{PubKeyHash}
+use more_aiken_examples/alias.{PubKeyHash}
 
 pub opaque type Datum {
   lock_until: PosixTime,

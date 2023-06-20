@@ -14,11 +14,16 @@ version = "main"
 source = "github"
 
 [[dependencies]]
+name = "ariady-putra/string_util"
+version = "main"
+source = "github"
+
+[[dependencies]]
 name = "ariady-putra/time_util"
 version = "main"
 source = "github"
 
 [[dependencies]]
-name = "ariady-putra/string_util"
+name = "ariady-putra/morbid"
 version = "main"
 source = "github"

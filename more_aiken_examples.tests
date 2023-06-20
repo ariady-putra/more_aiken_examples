@@ -1,0 +1,45 @@
+    Compiling aiken-lang/stdlib main (/home/ariady/aiken/more_aiken_examples/build/packages/aiken-lang-stdlib)
+    Compiling ariady-putra/string_util main (/home/ariady/aiken/more_aiken_examples/build/packages/ariady-putra-string_util)
+    Compiling ariady-putra/time_util main (/home/ariady/aiken/more_aiken_examples/build/packages/ariady-putra-time_util)
+    Compiling ariady-putra/morbid main (/home/ariady/aiken/more_aiken_examples/build/packages/ariady-putra-morbid)
+    Compiling ariady-putra/more_aiken_examples 0.0.0 (/home/ariady/aiken/more_aiken_examples)
+      Testing ...
+
+    ┍━ more_aiken_examples/tests ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │ PASS [mem: 1788377, cpu:  981120315] should_be_unlocked_by_owner
+    │ ↳ Datum: "d8799f055130776e725075384c21634b3379483435685138336e336631633134727927355f504b48ff"
+    │ ↳ Redeemer: "d87980"
+    │ ↳ ScriptContext: "d8799fd8799f808080a140a1401a001e8480a080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f5130776e725075384c21634b337948343568ffa0a0d8799f40ffffd87a9fd8799fd8799f40ff00ffffff"
+    │ PASS [mem: 1822418, cpu:  999401855] should_be_unlocked_by_beneficiary_after_deadline
+    │ ↳ Datum: "d8799f055130776e725075384c21634b3379483435685138336e336631633134727927355f504b48ff"
+    │ ↳ Redeemer: "d87980"
+    │ ↳ ScriptContext: "d8799fd8799f808080a140a1401a001e8480a080a0d8799fd8799fd87a9f06ffd87a80ffd8799fd87b80d87a80ffff9f5138336e336631633134727927355f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f40ff00ffffff"
+    │ ↳ txn_is_signed_by_owner() ? False
+    │ PASS [mem: 1846401, cpu: 1013807800] should_be_unlocked_by_beneficiary_at_deadline
+    │ ↳ Datum: "d8799f055130776e725075384c21634b3379483435685138336e336631633134727927355f504b48ff"
+    │ ↳ Redeemer: "d87980"
+    │ ↳ ScriptContext: "d8799fd8799f808080a140a1401a001e8480a080a0d8799fd8799fd87a9f05ffd87a80ffd8799fd87a9f06ffd87a80ffff9f5138336e336631633134727927355f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f40ff00ffffff"
+    │ ↳ txn_is_signed_by_owner() ? False
+    │ PASS [mem: 1810692, cpu:  994799267] should_not_be_unlocked_by_beneficiary_before_deadline
+    │ ↳ Datum: "d8799f055130776e725075384c21634b3379483435685138336e336631633134727927355f504b48ff"
+    │ ↳ Redeemer: "d87980"
+    │ ↳ ScriptContext: "d8799fd8799f808080a140a1401a001e8480a080a0d8799fd8799fd87980d87a80ffd8799fd87a9f06ffd87a80ffff9f5138336e336631633134727927355f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f40ff00ffffff"
+    │ ↳ txn_is_signed_by_owner() ? False
+    │ ↳ txn_is_signed_by_beneficiary_after_or_at_deadline() ? False
+    │ PASS [mem: 1825383, cpu: 1000537107] should_not_be_unlocked_by_neither_owner_nor_beneficiary
+    │ ↳ Datum: "d8799f055130776e725075384c21634b3379483435685138336e336631633134727927355f504b48ff"
+    │ ↳ Redeemer: "d87980"
+    │ ↳ ScriptContext: "d8799fd8799f808080a140a1401a001e8480a080a0d8799fd8799fd87a9f06ffd87a80ffd8799fd87b80d87a80ffff9f514834636b33725f5075384b337948343568ffa0a0d8799f40ffffd87a9fd8799fd8799f40ff00ffffff"
+    │ ↳ txn_is_signed_by_owner() ? False
+    │ ↳ txn_is_signed_by_beneficiary_after_or_at_deadline() ? False
+    │ PASS [mem: 1362751, cpu:  785471772] should_not_be_unlocked_by_empty_signatory
+    │ ↳ Datum: "d8799f055130776e725075384c21634b3379483435685138336e336631633134727927355f504b48ff"
+    │ ↳ Redeemer: "d87980"
+    │ ↳ ScriptContext: "d8799fd8799f808080a140a1401a001e8480a080a0d8799fd8799fd87a9f06ffd87a80ffd8799fd87b80d87a80ffff80a0a0d8799f40ffffd87a9fd8799fd8799f40ff00ffffff"
+    │ ↳ txn_is_signed_by_owner() ? False
+    │ ↳ txn_is_signed_by_beneficiary_after_or_at_deadline() ? False
+    ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6 tests | 6 passed | 0 failed
+
+
+Summary
+    0 errors, 0 warnings

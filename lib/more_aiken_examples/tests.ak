@@ -46,8 +46,8 @@ use aiken/transaction.{
   OutputReference, ScriptContext, Spend, Transaction, TransactionId,
 }
 use aiken/transaction/value.{from_lovelace, to_minted_value, zero}
+use more_aiken_examples/alias.{PubKeyHash}
 use more_aiken_examples/struct/datum
-use more_aiken_examples/types.{PubKeyHash}
 use more_aiken_examples/vesting.{unlock}
 use string_util/cbor.{print}
 
