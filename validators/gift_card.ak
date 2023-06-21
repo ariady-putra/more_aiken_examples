@@ -1,5 +1,4 @@
 use aiken/dict
-use aiken/interval.{Finite, IntervalBoundType}
 use aiken/list.{any, has}
 use aiken/time.{PosixTime}
 use aiken/transaction.{OutputReference, ScriptContext} as tx
@@ -7,7 +6,7 @@ use aiken/transaction/value.{AssetName, PolicyId, from_minted_value, tokens}
 use morbid/chain.{and}
 use more_aiken_examples/alias.{PubKeyHash}
 use more_aiken_examples/struct/redeemer.{Action} as action
-use time_util/bound.{start_bound_type_of}
+use time_util/unsafe/bound as unsafe_unwrap
 
 validator(utxo_ref: OutputReference, token_name: AssetName) {
   fn mint_burn(redeemer action: Action, context ctx: ScriptContext) -> Bool {
@@ -42,9 +41,8 @@ validator(
     redeemer action: Action,
     context ctx: ScriptContext,
   ) -> Bool {
-    expect Finite(now): IntervalBoundType<PosixTime> =
-      start_bound_type_of(ctx.transaction.validity_range)
-    let expired = (now > valid_thru)?
+    let expired =
+      (unsafe_unwrap.finite_start_of(ctx.transaction.validity_range) > valid_thru)?
     when (action, expired?) is {
       //
       // burn before expired:
