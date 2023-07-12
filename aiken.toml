@@ -14,12 +14,17 @@ version = "main"
 source = "github"
 
 [[dependencies]]
-name = "ariady-putra/string_util"
+name = "aiken-extra/string_util"
 version = "main"
 source = "github"
 
 [[dependencies]]
-name = "ariady-putra/time_util"
+name = "aiken-extra/time_util"
+version = "main"
+source = "github"
+
+[[dependencies]]
+name = "aiken-extra/tx_util"
 version = "main"
 source = "github"
 
