@@ -3,22 +3,22 @@
 
 [[requirements]]
 name = "aiken-lang/stdlib"
-version = "main"
+version = "1.9.0"
 source = "github"
 
 [[requirements]]
 name = "aiken-extra/string_util"
-version = "main"
+version = "3.190.202405"
 source = "github"
 
 [[requirements]]
 name = "aiken-extra/time_util"
-version = "main"
+version = "5.190.202405"
 source = "github"
 
 [[requirements]]
 name = "aiken-extra/tx_util"
-version = "main"
+version = "1.190.202405"
 source = "github"
 
 [[requirements]]
@@ -28,25 +28,25 @@ source = "github"
 
 [[packages]]
 name = "aiken-lang/stdlib"
-version = "main"
+version = "1.9.0"
 requirements = []
 source = "github"
 
 [[packages]]
 name = "aiken-extra/string_util"
-version = "main"
+version = "3.190.202405"
 requirements = []
 source = "github"
 
 [[packages]]
 name = "aiken-extra/time_util"
-version = "main"
+version = "5.190.202405"
 requirements = []
 source = "github"
 
 [[packages]]
 name = "aiken-extra/tx_util"
-version = "main"
+version = "1.190.202405"
 requirements = []
 source = "github"
 
@@ -55,3 +55,6 @@ name = "ariady-putra/morbid"
 version = "main"
 requirements = []
 source = "github"
+
+[etags]
+"ariady-putra/morbid@main" = [{ secs_since_epoch = 1717158466, nanos_since_epoch = 371979914 }, "5cf9311f6a600aadfeca5b25f49505951cc4f20bdd1d940b756afcbea2687575"]

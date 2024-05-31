@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>more_aiken_examples/vesting - ariady-putra/more_aiken_examples</title>
+    <title>more_aiken_examples/struct/opaque_type - ariady-putra/more_aiken_examples</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
-    <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
-    <link rel="stylesheet" href="../css/index.css?v=1.0.28-alpha" type="text/css"/>
-    <link id="syntax-theme" rel="stylesheet" href="../css/atom-one-light.min.css?v=1.0.28-alpha"/>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="../../favicon.svg"/>
+    <link rel="stylesheet" href="../../css/index.css?v=1.0.28-alpha" type="text/css"/>
+    <link id="syntax-theme" rel="stylesheet" href="../../css/atom-one-light.min.css?v=1.0.28-alpha"/>
   </head>
   <body class="prewrap-off theme-light drawer-closed">
     <script>
       "use strict";
-      window.breadcrumbs = '..';
+      window.breadcrumbs = '../..';
       const aikenConfig = {
         theme: {
           values: (() => {
@@ -118,7 +118,7 @@
       </button>
 
       <h2>
-        <a href="../">more_aiken_examples</a>
+        <a href="../../">more_aiken_examples</a>
         <span id="project-version">
           <span>v1.9.0 </span>
         </span>
@@ -192,39 +192,46 @@
 	
         <ul>
         
-	  <li><a href="../more_aiken_examples/alias.html">
+	  <li><a href="../../more_aiken_examples/alias.html">
 	  
 	  alias
 	  
 	  </a></li>
         
-	  <li><a href="../more_aiken_examples/struct/datum.html">
+	  <li><a href="../../more_aiken_examples/struct/datum.html">
 	  
 	  struct/datum
 	  
 	  </a></li>
         
-	  <li><a href="../more_aiken_examples/struct/opaque_type.html">
+	  <li><a href="../../more_aiken_examples/struct/opaque_type.html">
 	  
-	  struct/opaque_type
+	  <strong>struct/opaque_type</strong>
 	  
 	  </a></li>
         
-	  <li><a href="../more_aiken_examples/struct/redeemer.html">
+	  <li><a href="../../more_aiken_examples/struct/redeemer.html">
 	  
 	  struct/redeemer
 	  
 	  </a></li>
         
-	  <li><a href="../more_aiken_examples/vesting.html">
+	  <li><a href="../../more_aiken_examples/vesting.html">
 	  
-	  <strong>vesting</strong>
+	  vesting
 	  
 	  </a></li>
         
         </ul>
 
         
+
+<h2>Types</h2>
+<ul>
+  
+  <li><a href="#OpaqueType">OpaqueType</a></li>
+  
+</ul>
 
 
 
@@ -233,7 +240,13 @@
 <h2>Functions</h2>
 <ul>
   
-  <li><a href="#unlock">unlock</a></li>
+  <li><a href="#get_beneficiary">get_beneficiary</a></li>
+  
+  <li><a href="#get_lock_until">get_lock_until</a></li>
+  
+  <li><a href="#get_owner">get_owner</a></li>
+  
+  <li><a href="#new">new</a></li>
   
 </ul>
 
@@ -243,10 +256,40 @@
       <main class="content">
         
 <h1 id="module-name" class="module-name">
-  <a href="#module-name">more_aiken_examples/vesting</a>
+  <a href="#module-name">more_aiken_examples/struct/opaque_type</a>
 </h1>
+<p>Opaque Type Example</p>
 
 
+
+<section class="module-members">
+  <h1 id="module-types" class="module-member-kind">
+    <a href="#module-types">Types</a>
+  </h1>
+
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="OpaqueType">
+        <a href="#OpaqueType">
+	  OpaqueType
+        </a>
+      </h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="custom-type-constructors">
+      <div class="rendered-markdown"></div>
+      
+    </div>
+  </div>
+  
+</section>
 
 
 
@@ -259,7 +302,7 @@
   
   <div class="member">
     <div class="member-name">
-      <h2 id="unlock"><pre class="hljs language-aiken">unlock(datum: Datum, Void, context: ScriptContext) -&gt; Bool</pre></h2>
+      <h2 id="get_beneficiary"><pre class="hljs language-aiken">get_beneficiary(ot: OpaqueType) -&gt; PubKeyHash</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -268,10 +311,53 @@
       -->
       
     </div>
-    <div class="rendered-markdown"><p>We annotate the <code>redeemer</code> to <code>Void</code> to indicate that it isn’t used.
-We could also leave it unannotated but it’s generally good to signal your intent explicitly.
-<code>Void</code> captures that pretty well.</p>
-</div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="get_lock_until"><pre class="hljs language-aiken">get_lock_until(ot: OpaqueType) -&gt; PosixTime</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="get_owner"><pre class="hljs language-aiken">get_owner(ot: OpaqueType) -&gt; PubKeyHash</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="new"><pre class="hljs language-aiken">new(
+  lock_until: PosixTime,
+  owner: PubKeyHash,
+  beneficiary: PubKeyHash,
+) -&gt; OpaqueType</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
   </div>
   
 </section>
@@ -326,8 +412,8 @@ We could also leave it unannotated but it’s generally good to signal your inte
       </defs>
     </svg>
 
-    <script src="../js/highlight.min.js?v=1.0.28-alpha"></script>
-    <script src="../js/highlightjs-aiken.js?v=1.0.28-alpha"></script>
+    <script src="../../js/highlight.min.js?v=1.0.28-alpha"></script>
+    <script src="../../js/highlightjs-aiken.js?v=1.0.28-alpha"></script>
     <script>
       document.querySelectorAll("pre code").forEach((elem) => {
         if (elem.className === "") {
@@ -346,9 +432,9 @@ We could also leave it unannotated but it’s generally good to signal your inte
 	el.prepend(a);
       });
     </script>
-    <script src="../js/lunr.min.js?v=1.0.28-alpha"></script>
-    <script src="../js/index.js?v=1717158930"></script>
+    <script src="../../js/lunr.min.js?v=1.0.28-alpha"></script>
+    <script src="../../js/index.js?v=1717158930"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1717158930"></script>
+    <script src="../../search-data.js?v=1717158930"></script>
   </body>
 </html>

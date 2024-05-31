@@ -1,7 +1,7 @@
 name = "ariady-putra/more_aiken_examples"
-version = "0.0.0"
+version = "1.9.0"
 license = "Apache-2.0"
-description = "Aiken contracts for project 'ariady-putra/more_aiken_examples'"
+description = "Compatible with stdlib v1.9.0"
 
 [repository]
 user = "ariady-putra"
@@ -10,22 +10,22 @@ platform = "github"
 
 [[dependencies]]
 name = "aiken-lang/stdlib"
-version = "main"
+version = "1.9.0"
 source = "github"
 
 [[dependencies]]
 name = "aiken-extra/string_util"
-version = "main"
+version = "3.190.202405"
 source = "github"
 
 [[dependencies]]
 name = "aiken-extra/time_util"
-version = "main"
+version = "5.190.202405"
 source = "github"
 
 [[dependencies]]
 name = "aiken-extra/tx_util"
-version = "main"
+version = "1.190.202405"
 source = "github"
 
 [[dependencies]]

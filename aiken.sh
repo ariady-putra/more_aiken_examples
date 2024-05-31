@@ -4,6 +4,9 @@ MAGENTA='\033[1;35m'
 WHITE='\033[1;37m'
 RESET='\033[0m'
 
+# aiken format
+aiken fmt
+
 # aiken check
 echo -e "${MAGENTA}Running${RESET} ${WHITE}aiken check${RESET}:"
 aiken check 2>&1 | tee ${PROJECT}.tests

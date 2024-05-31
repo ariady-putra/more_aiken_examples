@@ -3,7 +3,6 @@ use aiken/list.{any, has}
 use aiken/time.{PosixTime}
 use aiken/transaction.{OutputReference, ScriptContext} as tx
 use aiken/transaction/value.{AssetName, PolicyId, from_minted_value, tokens}
-use morbid/chain.{and}
 use more_aiken_examples/alias.{PubKeyHash}
 use more_aiken_examples/struct/redeemer.{Action} as action
 use time_util/unsafe/bound as unsafe_unwrap
@@ -65,11 +64,11 @@ fn validate_minting(
   token_name: AssetName,
 ) -> Bool {
   when ctx |> minted_values_of(policy_id) is {
-    [(asset_name, asset_amount)] ->
-      chain.validate()
-        |> and(must_mint_once(_, ctx, utxo_ref))
-        |> and(must_be_amount(_, asset_amount, 1))
-        |> and(must_be_token_name(_, asset_name, token_name))
+    [Pair(asset_name, asset_amount)] -> and {
+        must_mint_once(ctx, utxo_ref),
+        must_be_amount(asset_amount, 1),
+        must_be_token_name(asset_name, token_name),
+      }
     // invalid number of asset(s)
     _ -> False
   }
@@ -81,31 +80,27 @@ fn validate_burning(
   token_name: AssetName,
 ) -> Bool {
   when ctx |> minted_values_of(policy_id) is {
-    [(asset_name, asset_amount)] ->
-      chain.validate()
-        |> and(must_be_amount(_, asset_amount, -1))
-        |> and(must_be_token_name(_, asset_name, token_name))
+    [Pair(asset_name, asset_amount)] -> and {
+        must_be_amount(asset_amount, -1),
+        must_be_token_name(asset_name, token_name),
+      }
     // invalid number of asset(s)
     _ -> False
   }
 }
 
-fn must_mint_once(
-  _,
-  context ctx: ScriptContext,
-  utxo_ref: OutputReference,
-) -> Bool {
+fn must_mint_once(context ctx: ScriptContext, utxo_ref: OutputReference) -> Bool {
   let one_shot =
     ctx.transaction.inputs
       |> any(fn(input) { input.output_reference == utxo_ref })
   one_shot?
 }
 
-fn must_be_amount(_, mint_burn: Int, amount: Int) -> Bool {
+fn must_be_amount(mint_burn: Int, amount: Int) -> Bool {
   (mint_burn == amount)?
 }
 
-fn must_be_token_name(_, asset_name: AssetName, token_name: AssetName) -> Bool {
+fn must_be_token_name(asset_name: AssetName, token_name: AssetName) -> Bool {
   (asset_name == token_name)?
 }
 
@@ -113,5 +108,5 @@ fn minted_values_of(context ctx: ScriptContext, policy_id: PolicyId) {
   ctx.transaction.mint
     |> from_minted_value()
     |> tokens(policy_id)
-    |> dict.to_list()
+    |> dict.to_pairs()
 }
