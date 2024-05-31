@@ -65,12 +65,9 @@ test should_be_unlocked_by_owner() {
       |> add_signatory(owner)
   //
   // trace:
-  trace "Datum"
-    |> print(datum)
-  trace "Redeemer"
-    |> print(redeemer)
-  trace "ScriptContext"
-    |> print(context)
+  trace print("Datum", datum)
+  trace print("Redeemer", redeemer)
+  trace print("ScriptContext", context)
   //
   // assert:
   unlock(datum, redeemer, context)
@@ -87,12 +84,9 @@ test should_be_unlocked_by_beneficiary_after_deadline() {
       |> add_signatory(beneficiary)
   //
   // trace:
-  trace "Datum"
-    |> print(datum)
-  trace "Redeemer"
-    |> print(redeemer)
-  trace "ScriptContext"
-    |> print(context)
+  trace print("Datum", datum)
+  trace print("Redeemer", redeemer)
+  trace print("ScriptContext", context)
   //
   // assert:
   unlock(datum, redeemer, context)
@@ -109,12 +103,9 @@ test should_be_unlocked_by_beneficiary_at_deadline() {
       |> add_signatory(beneficiary)
   //
   // trace:
-  trace "Datum"
-    |> print(datum)
-  trace "Redeemer"
-    |> print(redeemer)
-  trace "ScriptContext"
-    |> print(context)
+  trace print("Datum", datum)
+  trace print("Redeemer", redeemer)
+  trace print("ScriptContext", context)
   //
   // assert:
   unlock(datum, redeemer, context)
@@ -131,12 +122,9 @@ test should_not_be_unlocked_by_beneficiary_before_deadline() {
       |> add_signatory(beneficiary)
   //
   // trace:
-  trace "Datum"
-    |> print(datum)
-  trace "Redeemer"
-    |> print(redeemer)
-  trace "ScriptContext"
-    |> print(context)
+  trace print("Datum", datum)
+  trace print("Redeemer", redeemer)
+  trace print("ScriptContext", context)
   //
   // assert:
   !unlock(datum, redeemer, context)
@@ -153,12 +141,9 @@ test should_not_be_unlocked_by_neither_owner_nor_beneficiary() {
       |> add_signatory(hacker)
   //
   // trace:
-  trace "Datum"
-    |> print(datum)
-  trace "Redeemer"
-    |> print(redeemer)
-  trace "ScriptContext"
-    |> print(context)
+  trace print("Datum", datum)
+  trace print("Redeemer", redeemer)
+  trace print("ScriptContext", context)
   //
   // assert:
   !unlock(datum, redeemer, context)
@@ -174,12 +159,9 @@ test should_not_be_unlocked_by_empty_signatory() {
       |> build_txn_context()
   //
   // trace:
-  trace "Datum"
-    |> print(datum)
-  trace "Redeemer"
-    |> print(redeemer)
-  trace "ScriptContext"
-    |> print(context)
+  trace print("Datum", datum)
+  trace print("Redeemer", redeemer)
+  trace print("ScriptContext", context)
   //
   // assert:
   !unlock(datum, redeemer, context)

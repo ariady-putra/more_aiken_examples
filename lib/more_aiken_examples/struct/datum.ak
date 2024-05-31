@@ -1,7 +1,7 @@
 use aiken/time.{PosixTime}
 use more_aiken_examples/alias.{PubKeyHash}
 
-pub opaque type Datum {
+pub type Datum {
   lock_until: PosixTime,
   owner: PubKeyHash,
   beneficiary: PubKeyHash,

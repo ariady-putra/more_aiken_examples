@@ -116,7 +116,7 @@
 ////         fee: Value,
 ////         mint: MintedValue,
 ////         certificates: List<Certificate>,
-////         withdrawals: Dict<StakeCredential, Int>,
+////         withdrawals: Pairs<StakeCredential, Int>,
 ////         validity_range: ValidityRange = Interval<PosixTime = Int> {
 ////             lower_bound: IntervalBound<Int> {
 ////                 bound_type: IntervalBoundType<Int> {
@@ -136,7 +136,7 @@
 ////             }
 ////         },
 ////         extra_signatories: List<Hash<Blake2b_224, VerificationKey = ByteArray> = ByteArray>,
-////         redeemers: Dict<ScriptPurpose, Redeemer = Data>,
+////         redeemers: Pairs<ScriptPurpose, Redeemer = Data>,
 ////         datums: Dict<Hash<Blake2b_256, Data> = ByteArray, Data>,
 ////         id: TransactionId {
 ////             hash: Hash<Blake2b_256, Transaction> = ByteArray
